@@ -1,5 +1,5 @@
-import { StepItem } from '../types/steps';
 import './steps.css';
+import { StepItem } from '../../types/steps';
 
 export function Step({
   step,

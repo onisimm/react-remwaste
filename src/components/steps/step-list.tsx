@@ -2,7 +2,7 @@ import './steps.css';
 import { Fragment } from 'react';
 import Step from './step';
 import StepDivider from './step-divider';
-import { StepItem } from '../types/steps';
+import { StepItem } from '../../types/steps';
 
 export function StepList({
   steps,
