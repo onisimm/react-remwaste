@@ -1,10 +1,13 @@
 import './App.css';
-import { StepList } from './components/steps/step-list';
+import { StepList } from './components/step/step-list';
 import Description from './components/text/description';
 import Title from './components/text/title';
 import headerSteps from './constants/header-steps';
+import { useGetSkips } from './services/skip-service';
 
 function App() {
+  const { data: skips } = useGetSkips();
+
   return (
     <div className="app">
       <StepList steps={headerSteps} currentStep={2} />
