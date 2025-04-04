@@ -1,7 +1,7 @@
 import './text.css';
 
 function Description({ children }: { children: React.ReactNode }) {
-  return <text className="description">{children}</text>;
+  return <div className="description">{children}</div>;
 }
 
 export default Description;

@@ -1,7 +1,7 @@
 import './text.css';
 
 function Title({ children }: { children: React.ReactNode }) {
-  return <text className="title">{children}</text>;
+  return <div className="title">{children}</div>;
 }
 
 export default Title;

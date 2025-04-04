@@ -17,10 +17,10 @@ export function Step({
           <Icon color={isCompletedOrCurrent ? 'blue' : 'grey'} />
         </div>
       )}
-      <text
+      <div
         className={isCompletedOrCurrent ? 'complete-step' : 'incomplete-step'}>
         {text}
-      </text>
+      </div>
     </div>
   );
 }
