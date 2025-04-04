@@ -33,6 +33,14 @@
 
 .skip-header {
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.skip-main-details {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
@@ -64,7 +72,7 @@
 }
 
 .skip .price {
-  color: var(--primary-blue);
+  color: var(--secondary-blue);
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -138,7 +146,7 @@
 }
 
 .skip-selection-price {
-  color: var(--primary-blue);
+  color: var(--secondary-blue);
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -160,4 +168,67 @@
 
 .skip-selection-footer button:hover {
   background-color: var(--primary-blue-hover, #0056b3);
+}
+
+/* Tooltip styling */
+.info-icon-container {
+  position: relative;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.info-tooltip {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  transform: translateY(-100%);
+  background-color: var(--dark-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Position tooltip on the left side for smaller screens */
+@media (max-width: 768px) {
+  .info-tooltip {
+    right: auto;
+    left: 50%;
+    transform: translateX(-80%) translateY(-100%);
+  }
+}
+
+.info-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info-tooltip-title {
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.info-tooltip-content {
+  color: var(--secondary-text-color);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.bag-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.bag-info-number {
+  font-weight: 600;
+  color: var(--secondary-blue);
 }
