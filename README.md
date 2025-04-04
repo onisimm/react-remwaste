@@ -50,4 +50,9 @@
    - In order to better showcase a yard size, I tried explaining it in bag sizes. I used a general formula for this, but ideally, the api should return a bag-size or something similar, accurate for each yard size.
    - The explanation is found on each skip, by hovering on the information button, or clicking it on mobile.
 
+## Other Details
+
+- Used Typescript with plain CSS for styling
+- React Query with axios for retrieving the skip details from the api
+
 Let me know how it went out!
