@@ -16,7 +16,7 @@ export function Step({
     <div className="step">
       {Icon && (
         <div className="step-icon">
-          <Icon color={isCompleted ? 'blue' : 'grey'} />
+          <Icon color={isCompleted || isCurrent ? 'blue' : 'grey'} />
         </div>
       )}
       <text
