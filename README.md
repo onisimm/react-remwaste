@@ -31,6 +31,7 @@
    - I wanted to keep the overall dark contrast, so to increase visibility, I've only increased contrast on skip hover. It lights up now.
    - Also changed the color of the prices to a lighter blue as it was a bit too dark for the background.
    - Increased the overall spacing
+   - Reduced the size of the skip card. This allows the user to better see all the options, or see more options at a time.
 
 3. **Intuitive labeling**
 
