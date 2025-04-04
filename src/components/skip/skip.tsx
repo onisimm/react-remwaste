@@ -28,7 +28,7 @@ function SkipItem({
 
       <div className="features">
         <Feature enabled={allows_heavy_waste} label="Heavy waste allowed" />
-        <Feature enabled={allowed_on_road} label="On-road waste allowed" />
+        <Feature enabled={allowed_on_road} label="Public road placement" />
       </div>
     </div>
   );

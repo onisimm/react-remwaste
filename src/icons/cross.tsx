@@ -1,10 +1,6 @@
-import { IconPropsWithClassName } from '../types/icon';
+import { IconProps } from '../types/icon';
 
-export function Cross({
-  color = '#c92323',
-  size = 24,
-  ...props
-}: IconPropsWithClassName) {
+export function Cross({ color = '#c92323', size = 24, ...props }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

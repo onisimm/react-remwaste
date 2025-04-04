@@ -5,7 +5,3 @@ export interface IconProps {
   color?: string;
   props?: SVGProps<SVGSVGElement>;
 }
-
-export interface IconPropsWithClassName extends IconProps {
-  className?: string;
-}
