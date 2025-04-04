@@ -28,6 +28,7 @@
   justify-content: center;
   gap: 1.25rem;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 }
 
 .skip-header {
@@ -45,6 +46,7 @@
 
 .skip.selected {
   border: 2px solid var(--primary-blue);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
   transition: border 0.1s ease;
 }
 
@@ -114,6 +116,12 @@
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
   box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.skip-selection-footer.visible {
+  transform: translateY(0);
 }
 
 .skip-selection-details {

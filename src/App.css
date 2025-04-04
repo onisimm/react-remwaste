@@ -7,13 +7,13 @@
 }
 
 .padding-container {
-  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
 }
 
 .text-container {

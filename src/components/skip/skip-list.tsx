@@ -2,11 +2,12 @@ import './skips.css';
 import { Skip } from '../../types/skips';
 import SkipItem from './skip';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNumberAnimation } from '../../hooks/useNumberAnimation';
 
 function SkipList({ skips }: { skips: Skip[] }) {
   const [selectedSkip, setSelectedSkip] = useState<Skip | null>(null);
+  const [footerVisible, setFooterVisible] = useState<boolean>(false);
 
   const isMediumDevice = useMediaQuery(
     '(max-width: 1024px) and (min-width: 712px)',
@@ -31,6 +32,19 @@ function SkipList({ skips }: { skips: Skip[] }) {
   const { displayedValue: displayedPrice, isAnimating } =
     useNumberAnimation(targetPrice);
 
+  // Show footer with slight delay after selecting a skip
+  useEffect(() => {
+    if (selectedSkip) {
+      // Small delay to ensure the slide-up animation looks good
+      const timer = setTimeout(() => {
+        setFooterVisible(true);
+      }, 50);
+      return () => clearTimeout(timer);
+    } else {
+      setFooterVisible(false);
+    }
+  }, [selectedSkip]);
+
   return (
     <>
       <div className={`skip-list ${skipsPerRowClassName}`}>
@@ -45,7 +59,8 @@ function SkipList({ skips }: { skips: Skip[] }) {
       </div>
 
       {selectedSkip && (
-        <div className="skip-selection-footer">
+        <div
+          className={`skip-selection-footer ${footerVisible ? 'visible' : ''}`}>
           <div className="skip-selection-details">
             <div className="skip-selection-name">{`${selectedSkip.size} Yard Skip`}</div>
             <div
