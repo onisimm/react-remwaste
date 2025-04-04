@@ -1,0 +1,7 @@
+.enabled {
+  color: var(--primary-green);
+}
+
+.disabled {
+  color: var(--primary-red);
+}

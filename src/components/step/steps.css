@@ -69,26 +69,20 @@
 }
 
 .complete-step {
-  color: var(--text-color);
+  color: var(--primary-text-color);
 }
 
 .incomplete-step {
-  color: var(--secondary-text-color);
-}
-
-.current-step {
-  font-weight: 600;
+  color: var(--tertiary-text-color);
 }
 
 .step-divider {
-  height: 1px; /* A thin line */
+  height: 1px;
   width: 4rem;
-  background-color: var(--border-color); /* Default color */
+  background-color: var(--border-color);
   margin: 0 8px;
 }
 
 .step-divider.completed {
-  background-color: var(
-    --primary-blue
-  ); /* Blue divider if the previous step is completed */
+  background-color: var(--primary-blue);
 }

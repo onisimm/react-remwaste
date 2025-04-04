@@ -30,7 +30,7 @@ export function StepList({
           <span className="step-separator">/</span>
           <span className="step-count">{steps.length}</span>
         </div>
-        <Step step={steps[currentStep]} isCompleted={false} isCurrent={true} />
+        <Step step={steps[currentStep]} isCompletedOrCurrent={true} />
       </div>
     );
   }
@@ -39,11 +39,7 @@ export function StepList({
     <div className="step-list">
       {steps.map((step, index) => (
         <Fragment key={index}>
-          <Step
-            step={step}
-            isCompleted={index < currentStep}
-            isCurrent={index === currentStep}
-          />
+          <Step step={step} isCompletedOrCurrent={index <= currentStep} />
           {index < steps.length - 1 && (
             <StepDivider isPreviousCompleted={index < currentStep} />
           )}

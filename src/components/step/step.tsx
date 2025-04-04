@@ -3,12 +3,10 @@ import { StepItem } from '../../types/steps';
 
 export function Step({
   step,
-  isCompleted,
-  isCurrent,
+  isCompletedOrCurrent,
 }: {
   step: StepItem;
-  isCompleted: boolean;
-  isCurrent: boolean;
+  isCompletedOrCurrent: boolean;
 }) {
   const { icon: Icon, text } = step;
 
@@ -16,17 +14,11 @@ export function Step({
     <div className="step">
       {Icon && (
         <div className="step-icon">
-          <Icon color={isCompleted || isCurrent ? 'blue' : 'grey'} />
+          <Icon color={isCompletedOrCurrent ? 'blue' : 'grey'} />
         </div>
       )}
       <text
-        className={
-          isCompleted
-            ? 'complete-step'
-            : isCurrent
-            ? 'current-step'
-            : 'incomplete-step'
-        }>
+        className={isCompletedOrCurrent ? 'complete-step' : 'incomplete-step'}>
         {text}
       </text>
     </div>
